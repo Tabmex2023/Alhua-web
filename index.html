@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALHUA WEB – Páginas web en Sinaloa</title>
+  <title>ALHUA WEB – Diseño web en Sinaloa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -12,13 +13,13 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-image: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #333;
+      color: #ffffff;
     }
 
     header {
@@ -26,8 +27,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px 30px;
+      background-color: rgba(0, 0, 0, 0.4);
       position: fixed;
       top: 0;
       left: 0;
@@ -35,75 +36,81 @@
     }
 
     header img {
-      height: 60px;
+      height: 100px;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 20px;
+      gap: 25px;
     }
 
     nav ul li a {
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
+      color: #ffffff;
+      font-weight: 600;
       font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffd0;
     }
 
     .hero {
       text-align: center;
-      padding: 120px 20px 60px 20px;
-      background: rgba(255, 255, 255, 0.9);
+      padding: 160px 20px 80px 20px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 30px;
     }
 
     .hero a {
-      padding: 12px 24px;
-      background-color: #0078d4;
-      color: #fff;
+      padding: 14px 28px;
+      background-color: #00ffd0;
+      color: #000;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #00cfa4;
     }
 
     .section {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 30px auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 8px;
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     }
 
     .section h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 20px;
+      color: #00ffd0;
     }
 
     .features {
       list-style: none;
       padding: 0;
+      margin-top: 20px;
     }
 
     .features li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .features li:before {
-      content: "✅";
-      position: absolute;
-      left: 0;
+      margin-bottom: 12px;
+      font-size: 18px;
     }
 
     .whatsapp-button {
@@ -121,6 +128,7 @@
       font-size: 30px;
       text-decoration: none;
       z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -138,36 +146,36 @@
 </header>
 
 <div class="hero" id="inicio">
-  <h1>Sitios web que impresionan</h1>
+  <h1>Diseño web que impresiona</h1>
   <p>Rápido, moderno y local – hecho en Sinaloa</p>
-  <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratis</a>
+  <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratuita</a>
 </div>
 
 <div class="section" id="quienes">
   <h2>¿Quiénes somos?</h2>
-  <p>Somos <strong>ALHUA WEB</strong>, una agencia moderna de diseño web ubicada en Sinaloa. Creamos sitios personalizados para negocios locales que quieren ser visibles en internet. Solo pagas cuando el sitio esté terminado – y solo si estás satisfecho.</p>
+  <p>Somos <strong>ALHUA WEB</strong>, una agencia moderna de diseño web con base en Sinaloa. Creamos sitios personalizados para negocios locales que quieren destacar en internet. Solo pagas cuando tu sitio esté terminado – y solo si estás satisfecho.</p>
   <ul class="features">
-    <li>Optimizado para móviles</li>
-    <li>Carga rápida</li>
-    <li>Diseño personalizado</li>
-    <li>Fácil de administrar</li>
-    <li>Atención local y directa</li>
+    <li>✅ Optimizado para móviles</li>
+    <li>✅ Carga ultra rápida</li>
+    <li>✅ Diseño moderno y único</li>
+    <li>✅ Fácil de administrar</li>
+    <li>✅ Atención local y directa</li>
   </ul>
 </div>
 
 <div class="section" id="servicios">
   <h2>Servicios</h2>
   <ul class="features">
-    <li>Creación de páginas web a medida</li>
-    <li>Dominio y hospedaje</li>
-    <li>Optimización para Google (SEO)</li>
-    <li>Soporte y mantenimiento continuo</li>
+    <li>✅ Creación de páginas web a medida</li>
+    <li>✅ Dominio y hospedaje incluidos</li>
+    <li>✅ Optimización para Google (SEO)</li>
+    <li>✅ Soporte y mantenimiento continuo</li>
   </ul>
 </div>
 
 <div class="section" id="contacto">
   <h2>Contacto</h2>
-  <p>Contáctanos por WhatsApp o solicita una asesoría gratuita:</p>
+  <p>Contáctanos por WhatsApp y recibe una asesoría sin compromiso:</p>
   <a href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
 </div>
 
