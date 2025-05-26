@@ -12,11 +12,16 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      color: #0a1d5e; /* dunkelblau */
+      color: #0a1d5e;
+      background: #fff;
       position: relative;
-      z-index: 0;
     }
 
     body::before {
@@ -26,7 +31,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center;
       background-size: cover;
       opacity: 0.25;
       z-index: -1;
@@ -44,6 +49,7 @@
       top: 0;
       left: 0;
       z-index: 1000;
+      border-bottom: 1px solid #ccc;
     }
 
     header img {
@@ -69,10 +75,14 @@
       color: #00a8e8;
     }
 
+    .spacer {
+      height: 100px;
+    }
+
     .hero {
       text-align: center;
       padding: 160px 20px 80px 20px;
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
     }
 
     .hero h1 {
@@ -105,7 +115,7 @@
       max-width: 900px;
       margin: 30px auto;
       text-align: center;
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
     }
 
     .section h2 {
@@ -114,15 +124,10 @@
       color: #00ffd0;
     }
 
-    .features {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    .features li {
-      margin-bottom: 12px;
+    .section p {
       font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
 
     .whatsapp-button {
@@ -141,11 +146,6 @@
       text-decoration: none;
       z-index: 1000;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    /* Platz schaffen unter fixiertem Header */
-    .spacer {
-      height: 100px;
     }
   </style>
 </head>
@@ -172,29 +172,31 @@
 
 <div class="section" id="quienes">
   <h2>¿Quiénes somos?</h2>
-  <p>Somos <strong>ALHUA WEB</strong>, una agencia moderna de diseño web con base en Sinaloa. Creamos sitios personalizados para negocios locales que quieren destacar en internet. Solo pagas cuando tu sitio esté terminado – y solo si estás satisfecho.</p>
-  <ul class="features">
-    <li>✅ Optimizado para móviles</li>
-    <li>✅ Carga ultra rápida</li>
-    <li>✅ Diseño moderno y único</li>
-    <li>✅ Fácil de administrar</li>
-    <li>✅ Atención local y directa</li>
-  </ul>
+  <p>En ALHUA WEB nos especializamos en el desarrollo de páginas web profesionales para negocios en Sinaloa. Nuestro enfoque es crear sitios personalizados que proyecten confianza, calidad y una identidad visual clara.</p>
+  <p>Nos encargamos de todo: diseño, estructura, dominio, hospedaje, posicionamiento en buscadores (SEO) y soporte técnico. Lo mejor: solo pagas cuando estés completamente satisfecho con el resultado final.</p>
 </div>
 
 <div class="section" id="servicios">
   <h2>Servicios</h2>
-  <ul class="features">
-    <li>✅ Creación de páginas web a medida</li>
-    <li>✅ Dominio y hospedaje incluidos</li>
-    <li>✅ Optimización para Google (SEO)</li>
-    <li>✅ Soporte y mantenimiento continuo</li>
-  </ul>
+  <p>Estos son los servicios que ofrecemos a nuestros clientes:</p>
+  <p>
+    • Diseño web personalizado<br>
+    • Registro de dominio y configuración profesional<br>
+    • Hospedaje rápido y seguro<br>
+    • Optimización para buscadores (SEO)<br>
+    • Creación de correos corporativos<br>
+    • Integración con WhatsApp, Google Maps, redes sociales<br>
+    • Sitios responsivos (adaptables a móvil, tablet y PC)<br>
+    • E-commerce básico (tiendas con catálogo y contacto)<br>
+    • Formularios de contacto<br>
+    • Páginas multilíngües (opcional)<br>
+    • Soporte técnico y actualizaciones
+  </p>
 </div>
 
 <div class="section" id="contacto">
   <h2>Contacto</h2>
-  <p>Contáctanos por WhatsApp y recibe una asesoría sin compromiso:</p>
+  <p>¿Quieres una página profesional sin preocuparte por aspectos técnicos? Escríbenos por WhatsApp y cuéntanos sobre tu negocio. Te asesoramos sin compromiso y te enviamos una propuesta personalizada.</p>
   <a href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
 </div>
 
