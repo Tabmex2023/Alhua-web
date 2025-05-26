@@ -22,6 +22,7 @@
       color: #0a1d5e;
       background: #fff;
       position: relative;
+      text-align: center;
     }
 
     body::before {
@@ -33,7 +34,7 @@
       height: 100%;
       background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center;
       background-size: cover;
-      opacity: 0.25;
+      opacity: 0.2;
       z-index: -1;
     }
 
@@ -43,7 +44,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 30px;
-      background-color: rgba(241, 239, 239, 0.8);
+      background-color: rgba(241, 239, 239, 0.9); /* Logo-Farbe mit Transparenz */
       height: 100px;
       position: fixed;
       top: 0;
@@ -72,7 +73,7 @@
     }
 
     nav ul li a:hover {
-      color: #00a8e8;
+      color: #123d99;
     }
 
     .spacer {
@@ -80,9 +81,8 @@
     }
 
     .hero {
-      text-align: center;
       padding: 160px 20px 80px 20px;
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
     }
 
     .hero h1 {
@@ -93,30 +93,31 @@
     .hero p {
       font-size: 22px;
       margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero a {
-  padding: 14px 28px;
-  background-color: #0a1d5e;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+      padding: 14px 28px;
+      background-color: #0a1d5e;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+    }
 
-.hero a:hover {
-  background-color: #123d99;
-}
+    .hero a:hover {
+      background-color: #123d99;
     }
 
     .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 30px auto;
-      text-align: center;
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
     .section h2 {
@@ -129,6 +130,22 @@
       font-size: 18px;
       margin-bottom: 20px;
       line-height: 1.6;
+    }
+
+    .contact-button {
+      padding: 14px 28px;
+      background-color: #0a1d5e;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .contact-button:hover {
+      background-color: #123d99;
     }
 
     .whatsapp-button {
@@ -167,38 +184,37 @@
 
 <div class="hero" id="inicio">
   <h1>Diseño web que impresiona</h1>
-  <p>Rápido, moderno y local – hecho en Sinaloa</p>
+  <p>Rápido, moderno y local – hecho en Sinaloa. Crea una presencia digital profesional, sin complicaciones.</p>
   <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratuita</a>
 </div>
 
 <div class="section" id="quienes">
   <h2>¿Quiénes somos?</h2>
-  <p>En ALHUA WEB nos especializamos en el desarrollo de páginas web profesionales para negocios en Sinaloa. Nuestro enfoque es crear sitios personalizados que proyecten confianza, calidad y una identidad visual clara.</p>
-  <p>Nos encargamos de todo: diseño, estructura, dominio, hospedaje, posicionamiento en buscadores (SEO) y soporte técnico. Lo mejor: solo pagas cuando estés completamente satisfecho con el resultado final.</p>
+  <p>Somos ALHUA WEB – una agencia especializada en diseño y desarrollo web con sede en Sinaloa. Nos enfocamos en crear sitios modernos, rápidos y fáciles de usar, adaptados completamente a las necesidades de tu negocio.</p>
+  <p>Además, nos encargamos de todo: desde la compra del dominio hasta el posicionamiento en Google. Solo pagas cuando estés 100% satisfecho.</p>
 </div>
 
 <div class="section" id="servicios">
   <h2>Servicios</h2>
-  <p>Estos son los servicios que ofrecemos a nuestros clientes:</p>
+  <p>Ofrecemos un servicio completo de soluciones digitales:</p>
   <p>
-    • Diseño web personalizado<br>
-    • Registro de dominio y configuración profesional<br>
-    • Hospedaje rápido y seguro<br>
+    • Diseño web personalizado y responsivo<br>
+    • Registro de dominio y hosting seguro<br>
     • Optimización para buscadores (SEO)<br>
     • Creación de correos corporativos<br>
-    • Integración con WhatsApp, Google Maps, redes sociales<br>
-    • Sitios responsivos (adaptables a móvil, tablet y PC)<br>
-    • E-commerce básico (tiendas con catálogo y contacto)<br>
-    • Formularios de contacto<br>
-    • Páginas multilíngües (opcional)<br>
-    • Soporte técnico y actualizaciones
+    • Integración con redes sociales, WhatsApp, Google Maps<br>
+    • Formularios de contacto interactivos<br>
+    • Soporte técnico y mantenimiento<br>
+    • E-commerce básico (tienda con catálogo y contacto)<br>
+    • Páginas en varios idiomas (opcional)
   </p>
 </div>
 
 <div class="section" id="contacto">
   <h2>Contacto</h2>
-  <p>¿Quieres una página profesional sin preocuparte por aspectos técnicos? Escríbenos por WhatsApp y cuéntanos sobre tu negocio. Te asesoramos sin compromiso y te enviamos una propuesta personalizada.</p>
-  <a href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
+  <p>¿Tienes dudas o quieres saber cuánto te costaría tener tu propia página profesional?</p>
+  <p>Escríbenos por WhatsApp y cuéntanos tu idea. Te asesoramos sin compromiso y te damos una propuesta clara y rápida.</p>
+  <a href="https://wa.me/526731340913" class="contact-button" target="_blank">📲 Enviar mensaje</a>
 </div>
 
 <a class="whatsapp-button" href="https://wa.me/526731340913" target="_blank">💬</a>
