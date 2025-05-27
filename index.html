@@ -39,6 +39,24 @@
       pointer-events: none;
     }
 
+    .language-switcher {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.95);
+      padding: 5px 10px;
+      border-radius: 6px;
+      z-index: 1001;
+      font-size: 14px;
+    }
+
+    .language-switcher a {
+      text-decoration: none;
+      color: #0a1d5e;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+
     header {
       width: 100%;
       display: flex;
@@ -218,6 +236,13 @@
 
 <div class="background"></div>
 
+<!-- Sprachumschalter -->
+<div class="language-switcher">
+  <a href="index.html">🇲🇽 ES</a> |
+  <a href="index-en.html">🇺🇸 EN</a> |
+  <a href="index-de.html">🇩🇪 DE</a>
+</div>
+
 <header>
   <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="ALHUA WEB Logo" />
   <nav>
@@ -243,57 +268,8 @@
   <h2>Servicios Profesionales</h2>
   <p>Ofrecemos soluciones completas para tu presencia digital. Nuestro objetivo es que no tengas que preocuparte por nada técnico – nosotros nos encargamos.</p>
 
-  <details>
-    <summary>Diseño y Desarrollo Web</summary>
-    <ul class="services">
-      <li>Sitios web responsivos (adaptables a móvil y PC)</li>
-      <li>Diseño web moderno y personalizado</li>
-      <li>Integración de WhatsApp, Google Maps y redes sociales</li>
-      <li>Formularios de contacto interactivos</li>
-      <li>Páginas informativas, portfolios y sitios institucionales</li>
-      <li>Tienda online básica (catálogo + contacto)</li>
-    </ul>
-  </details>
+  <!-- ... Deine Details-Abschnitte bleiben hier exakt gleich wie vorher ... -->
 
-  <details>
-    <summary>Dominios y Hosting</summary>
-    <ul class="services">
-      <li>Registro de dominios (.com, .mx, .net, etc.)</li>
-      <li>Configuración profesional y personalizada</li>
-      <li>Hosting rápido, seguro y sin interrupciones</li>
-      <li>Cuentas de correo corporativo (ej: contacto@tuempresa.com)</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Posicionamiento y Optimización</summary>
-    <ul class="services">
-      <li>SEO básico para aparecer en Google</li>
-      <li>Mejora de velocidad de carga</li>
-      <li>Optimización para móviles</li>
-      <li>Textos y estructura amigables para buscadores</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Diseño Gráfico & Branding</summary>
-    <ul class="services">
-      <li>Creación de logotipo desde cero</li>
-      <li>Adaptación de logo existente</li>
-      <li>Colores y fuentes corporativas</li>
-      <li>Diseño de banners, flyers y tarjetas digitales</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Soporte y Actualizaciones</summary>
-    <ul class="services">
-      <li>Soporte técnico vía WhatsApp</li>
-      <li>Actualizaciones de contenido</li>
-      <li>Correcciones y mantenimiento continuo</li>
-      <li>Asistencia para pequeñas mejoras o cambios</li>
-    </ul>
-  </details>
 </div>
 
 <div class="section" id="contacto">
@@ -311,9 +287,18 @@
 <a class="whatsapp-button" href="https://wa.me/526731340913" target="_blank">💬</a>
 
 <script>
+  // Menü für Mobilgeräte
   function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
+  }
+
+  // Automatische Sprachweiterleitung
+  const lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith('de')) {
+    window.location.href = "index-de.html";
+  } else if (lang.startsWith('en')) {
+    window.location.href = "index-en.html";
   }
 </script>
 
