@@ -58,6 +58,10 @@
       object-fit: contain;
     }
 
+    nav {
+      position: relative;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
@@ -74,6 +78,37 @@
 
     nav ul li a:hover {
       color: #123d99;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #0a1d5e;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #ccc;
+        padding: 20px;
+        z-index: 999;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
     }
 
     .spacer {
@@ -185,7 +220,8 @@
 <header>
   <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="ALHUA WEB Logo" />
   <nav>
-    <ul>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -272,6 +308,13 @@
 </div>
 
 <a class="whatsapp-button" href="https://wa.me/526731340913" target="_blank">💬</a>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+  }
+</script>
 
 </body>
 </html>
