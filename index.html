@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
-      margin: 0; padding: 0;
-      background: #fff;
       color: #0a1d5e;
+      background: #fff;
       text-align: center;
     }
     body::before {
@@ -23,6 +23,7 @@
       opacity: 0.2;
       z-index: -1;
     }
+
     header {
       background-color: rgba(241, 239, 239, 0.9);
       position: fixed;
@@ -35,55 +36,86 @@
       border-bottom: 1px solid #ccc;
       z-index: 999;
     }
+
     header img {
       height: 100%;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 30px;
+      margin: 0;
+      padding: 0;
     }
+
     nav ul li a {
       text-decoration: none;
       color: #0a1d5e;
       font-weight: 600;
       font-size: 16px;
     }
+
     nav ul li a:hover {
       color: #123d99;
     }
+
     .language-switcher {
       position: fixed;
       top: 8px;
       right: 8px;
       background: rgba(255, 255, 255, 0.8);
-      padding: 5px 10px;
+      padding: 6px 10px;
       border-radius: 6px;
       font-size: 14px;
       z-index: 1000;
     }
+
     .language-switcher a {
       text-decoration: none;
       color: #0a1d5e;
       margin: 0 5px;
     }
+
     .language-switcher a:hover {
       color: #123d99;
     }
+
+    @media (max-width: 768px) {
+      .language-switcher {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 90px auto 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      }
+    }
+
     .section {
       padding: 140px 20px 60px;
       max-width: 800px;
       margin: auto;
     }
+
     .section h1, .section h2 {
       font-size: 30px;
       margin-bottom: 20px;
     }
+
     .section p {
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 20px;
     }
+
     .hero a, .section a {
       display: inline-block;
       padding: 14px 28px;
@@ -94,9 +126,11 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .hero a:hover, .section a:hover {
       background-color: #123d99;
     }
+
     details {
       text-align: left;
       margin-bottom: 20px;
@@ -105,15 +139,18 @@
       padding: 10px;
       background: rgba(255,255,255,0.8);
     }
+
     summary {
       font-weight: bold;
       font-size: 18px;
       cursor: pointer;
     }
+
     details ul {
       margin-top: 10px;
       padding-left: 20px;
     }
+
     details li {
       margin-bottom: 6px;
     }
@@ -121,98 +158,98 @@
 </head>
 <body>
 
-<div class="language-switcher">
-  <a href="index.html">🇲🇽 ES</a> |
-  <a href="index-en.html">🇬🇧 EN</a> |
-  <a href="index-de.html">🇩🇪 DE</a>
-</div>
+  <div class="language-switcher">
+    <a href="index.html">🇲🇽 ES</a> |
+    <a href="index-en.html">🇬🇧 EN</a> |
+    <a href="index-de.html">🇩🇪 DE</a>
+  </div>
 
-<header>
-  <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" />
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="#nosotros">Sobre nosotros</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" />
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="section hero" id="inicio">
-  <h1>Diseño web que impresiona</h1>
-  <p>Rápido, moderno y local – hecho en Sinaloa. Crea tu presencia profesional en línea, sin complicaciones.</p>
-  <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratuita</a>
-</div>
+  <div class="section hero" id="inicio">
+    <h1>Diseño web que impresiona</h1>
+    <p>Rápido, moderno y local – hecho en Sinaloa. Crea tu presencia profesional en línea sin complicaciones.</p>
+    <a href="https://wa.me/526731340913" target="_blank">Solicita tu consulta gratuita</a>
+  </div>
 
-<div class="section" id="servicios">
-  <h2>Servicios Profesionales</h2>
-  <p>Ofrecemos soluciones completas para tu presencia digital. Nuestro objetivo es que no tengas que preocuparte por nada técnico – nosotros nos encargamos.</p>
+  <div class="section" id="servicios">
+    <h2>Servicios Profesionales</h2>
+    <p>Ofrecemos soluciones completas para tu presencia digital. Nuestro objetivo es que no tengas que preocuparte por nada técnico – nosotros nos encargamos.</p>
 
-  <details>
-    <summary>Diseño y Desarrollo Web</summary>
-    <ul>
-      <li>Sitios web responsivos</li>
-      <li>Diseño personalizado</li>
-      <li>WhatsApp, Google Maps, redes sociales</li>
-      <li>Formularios interactivos</li>
-      <li>Páginas informativas, portfolios</li>
-      <li>Tienda online básica</li>
-    </ul>
-  </details>
+    <details>
+      <summary>Diseño y Desarrollo Web</summary>
+      <ul>
+        <li>Sitios web responsivos (móvil y escritorio)</li>
+        <li>Diseño personalizado y moderno</li>
+        <li>Integración de WhatsApp, Google Maps, redes sociales</li>
+        <li>Formularios de contacto interactivos</li>
+        <li>Páginas informativas, portfolios</li>
+        <li>Tienda online básica (catálogo + contacto)</li>
+      </ul>
+    </details>
 
-  <details>
-    <summary>Dominios y Hosting</summary>
-    <ul>
-      <li>Registro de dominios</li>
-      <li>Configuración profesional</li>
-      <li>Hosting rápido y seguro</li>
-      <li>Correos corporativos</li>
-    </ul>
-  </details>
+    <details>
+      <summary>Dominios y Hosting</summary>
+      <ul>
+        <li>Registro de dominios (.com, .mx, .net, etc.)</li>
+        <li>Configuración profesional</li>
+        <li>Hosting rápido y seguro</li>
+        <li>Correos corporativos (ej. contacto@tuempresa.com)</li>
+      </ul>
+    </details>
 
-  <details>
-    <summary>Posicionamiento y Optimización</summary>
-    <ul>
-      <li>SEO básico</li>
-      <li>Mejora de velocidad</li>
-      <li>Optimización móvil</li>
-      <li>Estructura amigable</li>
-    </ul>
-  </details>
+    <details>
+      <summary>Posicionamiento y Optimización</summary>
+      <ul>
+        <li>SEO básico para Google</li>
+        <li>Mejora de velocidad</li>
+        <li>Optimización móvil</li>
+        <li>Textos y estructura amigables para buscadores</li>
+      </ul>
+    </details>
 
-  <details>
-    <summary>Diseño Gráfico y Branding</summary>
-    <ul>
-      <li>Creación de logotipo</li>
-      <li>Adaptación de logos</li>
-      <li>Colores y fuentes</li>
-      <li>Banners, flyers</li>
-    </ul>
-  </details>
+    <details>
+      <summary>Diseño Gráfico & Branding</summary>
+      <ul>
+        <li>Creación de logotipo</li>
+        <li>Adaptación de logos existentes</li>
+        <li>Paleta de colores y fuentes</li>
+        <li>Diseño de banners, flyers, tarjetas digitales</li>
+      </ul>
+    </details>
 
-  <details>
-    <summary>Soporte y Actualizaciones</summary>
-    <ul>
-      <li>Soporte por WhatsApp</li>
-      <li>Actualización de contenido</li>
-      <li>Mantenimiento continuo</li>
-      <li>Asistencia para cambios</li>
-    </ul>
-  </details>
-</div>
+    <details>
+      <summary>Soporte y Actualizaciones</summary>
+      <ul>
+        <li>Soporte técnico por WhatsApp</li>
+        <li>Actualización de contenido</li>
+        <li>Mantenimiento continuo</li>
+        <li>Asistencia en cambios menores</li>
+      </ul>
+    </details>
+  </div>
 
-<div class="section" id="contacto">
-  <h2>Contacto</h2>
-  <p>¿Tienes preguntas o deseas saber cuánto costaría tu página web?</p>
-  <p>Escríbenos por WhatsApp y cuéntanos tu idea. Te asesoramos rápido y sin compromiso.</p>
-  <a class="hero a" href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
-</div>
+  <div class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas o quieres saber cuánto cuesta tu sitio web?</p>
+    <p>Escríbenos por WhatsApp y cuéntanos tu idea. Te asesoramos sin compromiso.</p>
+    <a href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
+  </div>
 
-<div class="section" id="nosotros">
-  <h2>Sobre nosotros</h2>
-  <p>ALHUA WEB fue fundada por Tobias (de Alemania) y Griselda (de Sinaloa, México), quienes unieron su pasión por la tecnología y el diseño para crear una agencia que entiende las necesidades locales y los estándares internacionales.</p>
-</div>
+  <div class="section" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>ALHUA WEB fue fundada por Tobias (alemán) y Griselda (mexicana de Sinaloa), quienes unieron su pasión por la tecnología y el diseño para ofrecer soluciones modernas y accesibles para todos.</p>
+  </div>
 
 </body>
 </html>
