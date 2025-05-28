@@ -13,7 +13,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #fff;
+      background: #f2f2f2;
       color: #0a1d5e;
     }
 
@@ -24,13 +24,12 @@
       width: 100%; height: 100%;
       background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center;
       background-size: cover;
-      opacity: 0.2;
+      opacity: 0.15;
       z-index: -1;
     }
 
-    /* Sprachumschalter */
     .lang-bar {
-      background: #ffffffdd;
+      background: #f2f2f2;
       text-align: center;
       padding: 6px 10px;
       font-size: 14px;
@@ -51,12 +50,11 @@
       color: #123d99;
     }
 
-    /* Header */
     header {
       position: fixed;
-      top: 34px; /* Platz für Sprachenleiste */
+      top: 34px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
+      background: #f2f2f2;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -66,7 +64,7 @@
     }
 
     .logo {
-      height: 60px;
+      height: 80px;
     }
 
     nav {
@@ -102,7 +100,6 @@
       border-radius: 2px;
     }
 
-    /* Abschnitte */
     .section {
       padding: 160px 20px 60px;
       max-width: 800px;
@@ -149,7 +146,6 @@
       cursor: pointer;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -175,14 +171,12 @@
 </head>
 <body>
 
-  <!-- Sprachleiste -->
   <div class="lang-bar">
     <a href="index.html">🇲🇽 ES</a> |
     <a href="index-en.html">🇬🇧 EN</a> |
     <a href="index-de.html">🇩🇪 DE</a>
   </div>
 
-  <!-- Header -->
   <header>
     <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" class="logo">
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -198,7 +192,6 @@
     </nav>
   </header>
 
-  <!-- Inhalt -->
   <div class="section hero" id="inicio">
     <h1>Diseño web que impresiona</h1>
     <p>Rápido, moderno y local – hecho en Sinaloa. Crea tu presencia profesional en línea sin complicaciones.</p>
@@ -247,7 +240,6 @@
     <p>ALHUA WEB fue fundada por Tobias (alemán) y Griselda (mexicana de Sinaloa), combinando tecnología y diseño para ofrecer soluciones digitales modernas.</p>
   </div>
 
-  <!-- JavaScript für Menü -->
   <script>
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('show');
