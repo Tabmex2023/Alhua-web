@@ -32,24 +32,18 @@
       padding: 0 20px;
       border-bottom: 1px solid #ccc;
       z-index: 999;
-    }
-
-    .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
+      height: 80px;
     }
 
-    .header-inner img {
-      height: 80px;
+    .logo {
+      height: 60px;
     }
 
     .language-switcher {
       font-size: 14px;
-      margin-top: 5px;
     }
 
     .language-switcher a {
@@ -63,14 +57,26 @@
       color: #123d99;
     }
 
+    nav {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #ffffffee;
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
       padding: 0;
-      justify-content: center;
-      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    nav ul li {
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
     }
 
     nav ul li a {
@@ -80,8 +86,19 @@
       font-size: 16px;
     }
 
-    nav ul li a:hover {
-      color: #123d99;
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .menu-toggle span {
+      background-color: #0a1d5e;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
     }
 
     .section {
@@ -140,21 +157,48 @@
       margin-bottom: 6px;
     }
 
-    @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      nav {
+        position: static;
+        display: block !important;
+        background: none;
+        width: auto;
       }
 
       nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding-bottom: 10px;
+        display: flex;
+        gap: 30px;
+        justify-content: flex-end;
+        border: none;
       }
 
-      .language-switcher {
-        margin: 10px 0;
+      nav ul li {
+        border: none;
+        padding: 0;
+      }
+
+      header {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      header {
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -162,23 +206,29 @@
 <body>
 
   <header>
-    <div class="header-inner">
-      <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="ALHUA WEB Logo" />
-      <div class="language-switcher">
-        <a href="index.html">🇲🇽 ES</a> |
-        <a href="index-en.html">🇬🇧 EN</a> |
-        <a href="index-de.html">🇩🇪 DE</a>
-      </div>
+    <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" class="logo" />
+    
+    <div class="language-switcher">
+      <a href="index.html">🇲🇽 ES</a> |
+      <a href="index-en.html">🇬🇧 EN</a> |
+      <a href="index-de.html">🇩🇪 DE</a>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#nosotros">Sobre Nosotros</a></li>
-      </ul>
-    </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
+  <nav id="mobileMenu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#nosotros">Sobre Nosotros</a></li>
+    </ul>
+  </nav>
 
   <div class="section hero" id="inicio">
     <h1>Diseño web que impresiona</h1>
@@ -254,6 +304,13 @@
     <h2>Sobre Nosotros</h2>
     <p>ALHUA WEB fue fundada por Tobias (alemán) y Griselda (mexicana de Sinaloa), quienes unieron su pasión por la tecnología y el diseño para ofrecer soluciones modernas y accesibles para todos.</p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileMenu");
+      nav.classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
