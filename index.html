@@ -3,308 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALHUA WEB – Diseño web en Sinaloa</title>
-  <link rel="icon" href="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" type="image/png">
+  <title>ALHUA WEB</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; scroll-behavior: smooth; }
     body {
       font-family: 'Poppins', sans-serif;
-      color: #0a1d5e;
+      margin: 0; padding: 0;
       background: #fff;
-      position: relative;
+      color: #0a1d5e;
       text-align: center;
     }
-    .background {
+
+    body::before {
+      content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center;
       background-size: cover;
       opacity: 0.2;
       z-index: -1;
-      pointer-events: none;
     }
-    .language-switcher {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: rgba(255,255,255,0.95);
-      padding: 5px 10px;
-      border-radius: 6px;
-      z-index: 1001;
-      font-size: 14px;
-    }
-    .language-switcher a {
-      text-decoration: none;
-      color: #0a1d5e;
-      font-weight: bold;
-      margin: 0 5px;
-    }
+
     header {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 30px;
       background-color: rgba(241, 239, 239, 0.9);
-      height: 100px;
       position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
+      top: 0; width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
       border-bottom: 1px solid #ccc;
+      z-index: 999;
     }
+
     header img {
       height: 100%;
-      object-fit: contain;
     }
-    nav {
-      position: relative;
-    }
+
     nav ul {
-      display: flex;
       list-style: none;
+      display: flex;
       gap: 30px;
     }
+
     nav ul li a {
       text-decoration: none;
       color: #0a1d5e;
       font-weight: 600;
       font-size: 16px;
-      transition: color 0.3s;
     }
+
     nav ul li a:hover {
       color: #123d99;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 32px;
-      background: none;
-      border: none;
-      cursor: pointer;
+
+    .language-switcher {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .language-switcher a {
+      text-decoration: none;
       color: #0a1d5e;
+      margin: 0 5px;
     }
-    @media (max-width: 768px) {
-      .menu-toggle { display: block; }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid #ccc;
-        padding: 20px;
-        z-index: 999;
-      }
-      nav ul.show { display: flex; }
+
+    .language-switcher a:hover {
+      color: #123d99;
     }
-    .spacer { height: 100px; }
+
     .section {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 140px 20px 60px;
+      max-width: 800px;
       margin: auto;
     }
+
     .section h1, .section h2 {
       font-size: 30px;
       margin-bottom: 20px;
-      color: #0a1d5e;
     }
+
     .section p {
       font-size: 18px;
-      margin-bottom: 20px;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
-    .hero {
-      padding: 160px 20px 80px 20px;
-    }
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 22px;
-      margin-bottom: 30px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+
     .hero a {
+      display: inline-block;
       padding: 14px 28px;
       background-color: #0a1d5e;
       color: #ffffff;
-      text-decoration: none;
       border-radius: 6px;
-      font-size: 18px;
+      text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
-      display: inline-block;
     }
+
     .hero a:hover {
       background-color: #123d99;
-    }
-    details {
-      margin-bottom: 20px;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: left;
-    }
-    summary {
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
-      outline: none;
-    }
-    ul.services {
-      list-style: none;
-      padding-left: 15px;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-    ul.services li::before {
-      content: "– ";
-      color: #0a1d5e;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      z-index: 1000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
 
-<div class="background"></div>
-
-<div class="language-switcher">
-  <a href="index.html">🇲🇽 ES</a> |
-  <a href="index-en.html">🇺🇸 EN</a> |
-  <a href="index-de.html">🇩🇪 DE</a>
-</div>
-
 <header>
   <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="ALHUA WEB Logo" />
   <nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <ul id="menu">
+    <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="#nosotros">Sobre nosotros</a></li>
     </ul>
   </nav>
+  <div class="language-switcher">
+    <a href="index.html">🇲🇽 ES</a> |
+    <a href="index-en.html">🇬🇧 EN</a> |
+    <a href="index-de.html">🇩🇪 DE</a>
+  </div>
 </header>
 
-<div class="spacer"></div>
-
-<div class="hero" id="inicio">
+<div class="section hero" id="inicio">
   <h1>Diseño web que impresiona</h1>
   <p>Rápido, moderno y local – hecho en Sinaloa. Crea una presencia digital profesional, sin complicaciones.</p>
   <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratuita</a>
-</div>
-
-<div class="section" id="servicios">
-  <h2>Servicios Profesionales</h2>
-  <p>Ofrecemos soluciones completas para tu presencia digital...</p>
-
-  <details>
-    <summary>Diseño y Desarrollo Web</summary>
-    <ul class="services">
-      <li>Sitios web responsivos (adaptables a móvil y PC)</li>
-      <li>Diseño web moderno y personalizado</li>
-      <li>Integración de WhatsApp, Google Maps y redes sociales</li>
-      <li>Formularios de contacto interactivos</li>
-      <li>Páginas informativas, portfolios y sitios institucionales</li>
-      <li>Tienda online básica (catálogo + contacto)</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Dominios y Hosting</summary>
-    <ul class="services">
-      <li>Registro de dominios (.com, .mx, .net, etc.)</li>
-      <li>Configuración profesional y personalizada</li>
-      <li>Hosting rápido, seguro y sin interrupciones</li>
-      <li>Cuentas de correo corporativo (ej: contacto@tuempresa.com)</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Posicionamiento y Optimización</summary>
-    <ul class="services">
-      <li>SEO básico para aparecer en Google</li>
-      <li>Mejora de velocidad de carga</li>
-      <li>Optimización para móviles</li>
-      <li>Textos y estructura amigables para buscadores</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Diseño Gráfico & Branding</summary>
-    <ul class="services">
-      <li>Creación de logotipo desde cero</li>
-      <li>Adaptación de logo existente</li>
-      <li>Colores y fuentes corporativas</li>
-      <li>Diseño de banners, flyers y tarjetas digitales</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Soporte y Actualizaciones</summary>
-    <ul class="services">
-      <li>Soporte técnico vía WhatsApp</li>
-      <li>Actualizaciones de contenido</li>
-      <li>Correcciones y mantenimiento continuo</li>
-      <li>Asistencia para pequeñas mejoras o cambios</li>
-    </ul>
-  </details>
 </div>
 
 <div class="section" id="contacto">
   <h2>Contacto</h2>
   <p>¿Tienes dudas o quieres saber cuánto te costaría tener tu propia página profesional?</p>
   <p>Escríbenos por WhatsApp y cuéntanos tu idea. Te asesoramos sin compromiso y te damos una propuesta clara y rápida.</p>
-  <a href="https://wa.me/526731340913" class="hero a" target="_blank">📲 Enviar mensaje</a>
+  <a class="hero a" href="https://wa.me/526731340913" target="_blank">📲 Enviar mensaje</a>
 </div>
 
 <div class="section" id="nosotros">
   <h2>Sobre nosotros</h2>
-  <p>ALHUA WEB fue fundada por Tobias (originario de Alemania) y Griselda (originaria de Sinaloa, México)...</p>
+  <p>ALHUA WEB fue fundada por Tobias (originario de Alemania) y Griselda (originaria de Sinaloa, México), quienes unieron su pasión por la tecnología y el diseño para crear una agencia que entiende tanto las necesidades locales como los estándares internacionales. Con raíces en Europa y corazón sinaloense, ofrecemos soluciones modernas con cercanía humana.</p>
 </div>
-
-<a class="whatsapp-button" href="https://wa.me/526731340913" target="_blank">💬</a>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-
-  const lang = navigator.language || navigator.userLanguage;
-  if (lang.startsWith('de')) {
-    window.location.href = "index-de.html";
-  } else if (lang.startsWith('en')) {
-    window.location.href = "index-en.html";
-  }
-</script>
 
 </body>
 </html>
