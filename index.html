@@ -93,7 +93,7 @@
       margin-bottom: 20px;
     }
 
-    .hero a {
+    .hero a, .section a {
       display: inline-block;
       padding: 14px 28px;
       background-color: #0a1d5e;
@@ -104,8 +104,32 @@
       transition: background 0.3s;
     }
 
-    .hero a:hover {
+    .hero a:hover, .section a:hover {
       background-color: #123d99;
+    }
+
+    details {
+      text-align: left;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background: rgba(255,255,255,0.8);
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    details ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    details li {
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -132,6 +156,63 @@
   <h1>Diseño web que impresiona</h1>
   <p>Rápido, moderno y local – hecho en Sinaloa. Crea una presencia digital profesional, sin complicaciones.</p>
   <a href="https://wa.me/526731340913" target="_blank">Solicita tu asesoría gratuita</a>
+</div>
+
+<div class="section" id="servicios">
+  <h2>Servicios Profesionales</h2>
+  <p>Ofrecemos soluciones completas para tu presencia digital. Nuestro objetivo es que no tengas que preocuparte por nada técnico – nosotros nos encargamos.</p>
+
+  <details>
+    <summary>Diseño y Desarrollo Web</summary>
+    <ul>
+      <li>Sitios web responsivos (adaptables a móvil y PC)</li>
+      <li>Diseño web moderno y personalizado</li>
+      <li>Integración de WhatsApp, Google Maps y redes sociales</li>
+      <li>Formularios de contacto interactivos</li>
+      <li>Páginas informativas, portfolios y sitios institucionales</li>
+      <li>Tienda online básica (catálogo + contacto)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Dominios y Hosting</summary>
+    <ul>
+      <li>Registro de dominios (.com, .mx, .net, etc.)</li>
+      <li>Configuración profesional y personalizada</li>
+      <li>Hosting rápido, seguro y sin interrupciones</li>
+      <li>Cuentas de correo corporativo (ej: contacto@tuempresa.com)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Posicionamiento y Optimización</summary>
+    <ul>
+      <li>SEO básico para aparecer en Google</li>
+      <li>Mejora de velocidad de carga</li>
+      <li>Optimización para móviles</li>
+      <li>Textos y estructura amigables para buscadores</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Diseño Gráfico & Branding</summary>
+    <ul>
+      <li>Creación de logotipo desde cero</li>
+      <li>Adaptación de logo existente</li>
+      <li>Colores y fuentes corporativas</li>
+      <li>Diseño de banners, flyers y tarjetas digitales</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Soporte y Actualizaciones</summary>
+    <ul>
+      <li>Soporte técnico vía WhatsApp</li>
+      <li>Actualizaciones de contenido</li>
+      <li>Correcciones y mantenimiento continuo</li>
+      <li>Asistencia para pequeñas mejoras o cambios</li>
+    </ul>
+  </details>
 </div>
 
 <div class="section" id="contacto">
