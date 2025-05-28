@@ -6,12 +6,12 @@
   <title>ALHUA WEB</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    * { box-sizing: border-box; }
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
-      margin: 0; padding: 0;
-      background: #fff;
+      background: #f2f2f2;
       color: #0a1d5e;
-      text-align: center;
     }
     body::before {
       content: "";
@@ -20,60 +20,76 @@
       width: 100%; height: 100%;
       background: url('https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png') no-repeat center center;
       background-size: cover;
-      opacity: 0.2;
+      opacity: 0.15;
       z-index: -1;
     }
-    header {
-      background-color: rgba(241, 239, 239, 0.9);
+    .lang-bar {
+      background: #f2f2f2;
+      text-align: center;
+      padding: 6px 10px;
+      font-size: 14px;
       position: fixed;
-      top: 0; width: 100%;
-      height: 100px;
+      top: 0;
+      width: 100%;
+      z-index: 1001;
+    }
+    .lang-bar a {
+      margin: 0 6px;
+      text-decoration: none;
+      color: #0a1d5e;
+      font-weight: 600;
+    }
+    .lang-bar a:hover {
+      color: #123d99;
+    }
+    header {
+      position: fixed;
+      top: 34px;
+      width: 100%;
+      background: #f2f2f2;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 30px;
+      padding: 10px 20px;
       border-bottom: 1px solid #ccc;
-      z-index: 999;
+      z-index: 1000;
     }
-    header img {
-      height: 100%;
+    .logo {
+      height: 80px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
     }
     nav ul {
       list-style: none;
       display: flex;
       gap: 30px;
+      margin: 0;
+      padding: 0;
     }
     nav ul li a {
       text-decoration: none;
       color: #0a1d5e;
       font-weight: 600;
-      font-size: 16px;
     }
-    nav ul li a:hover {
-      color: #123d99;
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
     }
-    .language-switcher {
-      position: fixed;
-      top: 8px;
-      right: 8px;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      z-index: 1000;
-    }
-    .language-switcher a {
-      text-decoration: none;
-      color: #0a1d5e;
-      margin: 0 5px;
-    }
-    .language-switcher a:hover {
-      color: #123d99;
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #0a1d5e;
+      margin: 4px 0;
+      border-radius: 2px;
     }
     .section {
-      padding: 140px 20px 60px;
+      padding: 160px 20px 60px;
       max-width: 800px;
       margin: auto;
+      text-align: center;
     }
     .section h1, .section h2 {
       font-size: 30px;
@@ -82,137 +98,133 @@
     .section p {
       font-size: 18px;
       line-height: 1.6;
-      margin-bottom: 20px;
     }
-    .hero a, .section a {
+    .section a {
       display: inline-block;
+      margin-top: 20px;
       padding: 14px 28px;
       background-color: #0a1d5e;
-      color: #ffffff;
+      color: #fff;
       border-radius: 6px;
-      text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      text-decoration: none;
     }
-    .hero a:hover, .section a:hover {
+    .section a:hover {
       background-color: #123d99;
     }
     details {
-      text-align: left;
-      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.8);
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 10px;
-      background: rgba(255,255,255,0.8);
+      margin: 20px auto;
+      text-align: left;
     }
     summary {
       font-weight: bold;
-      font-size: 18px;
       cursor: pointer;
     }
-    details ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-    details li {
-      margin-bottom: 6px;
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #ffffffee;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="language-switcher">
-  <a href="index.html">🇲🇽 ES</a> |
-  <a href="index-en.html">🇬🇧 EN</a> |
-  <a href="index-de.html">🇩🇪 DE</a>
-</div>
+  <div class="lang-bar">
+    <a href="index.html">🇲🇽 ES</a> |
+    <a href="index-en.html">🇬🇧 EN</a> |
+    <a href="index-de.html">🇩🇪 DE</a>
+  </div>
 
-<header>
-  <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" />
-  <nav>
-    <ul>
-      <li><a href="#inicio">Home</a></li>
-      <li><a href="#servicios">Services</a></li>
-      <li><a href="#contacto">Contact</a></li>
-      <li><a href="#nosotros">About Us</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <img src="https://i.postimg.cc/nzGDNbsh/360-DFAAE-2-C8-A-48-FB-8-B84-75-B2310-DF1-E9.png" alt="Logo" class="logo">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#inicio">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="section hero" id="inicio">
-  <h1>Web Design That Impresses</h1>
-  <p>Fast, modern, and local – made in Sinaloa. Create your professional online presence without complications.</p>
-  <a href="https://wa.me/526731340913" target="_blank">Request Your Free Consultation</a>
-</div>
+  <div class="section hero" id="inicio">
+    <h1>Web design that impresses</h1>
+    <p>Fast, modern, and local – made in Sinaloa. Create your professional online presence with no hassle.</p>
+    <a href="https://wa.me/526731340913" target="_blank">Request your free consultation</a>
+  </div>
 
-<div class="section" id="servicios">
-  <h2>Professional Services</h2>
-  <p>We offer complete solutions for your digital presence. Our goal is for you to not worry about technical issues – we take care of everything.</p>
+  <div class="section" id="services">
+    <h2>Professional Services</h2>
+    <p>We offer complete solutions for your digital presence.</p>
 
-  <details>
-    <summary>Web Design and Development</summary>
-    <ul>
-      <li>Responsive websites</li>
-      <li>Custom modern design</li>
-      <li>WhatsApp, Google Maps, social media integration</li>
+    <details><summary>Web Design & Development</summary><ul>
+      <li>Responsive websites (mobile & PC)</li>
+      <li>Modern and custom design</li>
+      <li>Integration of WhatsApp, Google Maps, social media</li>
       <li>Interactive contact forms</li>
-      <li>Informational pages, portfolios</li>
-      <li>Basic online store (catalog + contact)</li>
-    </ul>
-  </details>
+      <li>Informational pages, portfolios, and institutional sites</li>
+      <li>Basic online shop (catalog + contact)</li>
+    </ul></details>
 
-  <details>
-    <summary>Domains and Hosting</summary>
-    <ul>
-      <li>Domain registration (.com, .net, .mx, etc.)</li>
-      <li>Professional setup</li>
-      <li>Fast and secure hosting</li>
+    <details><summary>Domains & Hosting</summary><ul>
+      <li>Domain registration (.com, .mx, .net, etc.)</li>
+      <li>Professional and personalized setup</li>
+      <li>Fast, secure hosting with no downtime</li>
       <li>Corporate email accounts (e.g. contact@yourcompany.com)</li>
-    </ul>
-  </details>
+    </ul></details>
 
-  <details>
-    <summary>SEO and Optimization</summary>
-    <ul>
+    <details><summary>SEO & Optimization</summary><ul>
       <li>Basic SEO to appear on Google</li>
-      <li>Speed performance improvement</li>
+      <li>Improved loading speed</li>
       <li>Mobile optimization</li>
-      <li>Search-engine-friendly texts and structure</li>
-    </ul>
-  </details>
+      <li>Search-engine friendly text and structure</li>
+    </ul></details>
 
-  <details>
-    <summary>Graphic Design & Branding</summary>
-    <ul>
+    <details><summary>Graphic Design & Branding</summary><ul>
       <li>Logo creation from scratch</li>
-      <li>Existing logo adaptation</li>
+      <li>Adaptation of existing logo</li>
       <li>Corporate colors and fonts</li>
-      <li>Design for banners, flyers, digital cards</li>
-    </ul>
-  </details>
+      <li>Design of banners, flyers, and digital cards</li>
+    </ul></details>
+  </div>
 
-  <details>
-    <summary>Support and Updates</summary>
-    <ul>
-      <li>Technical support via WhatsApp</li>
-      <li>Content updates</li>
-      <li>Continuous maintenance</li>
-      <li>Assistance with small changes</li>
-    </ul>
-  </details>
-</div>
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Do you have questions or want to know the cost of your website?</p>
+    <a href="https://wa.me/526731340913" target="_blank">📲 Send message</a>
+  </div>
 
-<div class="section" id="contacto">
-  <h2>Contact</h2>
-  <p>Do you have questions or want to know how much your website would cost?</p>
-  <p>Write us on WhatsApp and tell us your idea. We’ll advise you quickly and without obligation.</p>
-  <a class="hero a" href="https://wa.me/526731340913" target="_blank">📲 Send Message</a>
-</div>
+  <div class="section" id="about">
+    <h2>About Us</h2>
+    <p>ALHUA WEB was founded by Tobias (a German) and Griselda (a proud Sinaloan), blending technology and design to offer modern digital solutions with an international touch.</p>
+  </div>
 
-<div class="section" id="nosotros">
-  <h2>About Us</h2>
-  <p>ALHUA WEB was founded by Tobias (from Germany) and Griselda (from Sinaloa, Mexico), who combined their passion for technology and design to build an agency that understands both local needs and international standards.</p>
-</div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
