@@ -93,7 +93,7 @@
       margin-bottom: 20px;
     }
 
-    .hero a {
+    .hero a, .section a {
       display: inline-block;
       padding: 14px 28px;
       background-color: #0a1d5e;
@@ -104,8 +104,32 @@
       transition: background 0.3s;
     }
 
-    .hero a:hover {
+    .hero a:hover, .section a:hover {
       background-color: #123d99;
+    }
+
+    details {
+      text-align: left;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background: rgba(255,255,255,0.8);
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    details ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    details li {
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -118,7 +142,7 @@
       <li><a href="#inicio">Home</a></li>
       <li><a href="#servicios">Services</a></li>
       <li><a href="#contacto">Contact</a></li>
-      <li><a href="#nosotros">About us</a></li>
+      <li><a href="#nosotros">About Us</a></li>
     </ul>
   </nav>
   <div class="language-switcher">
@@ -130,20 +154,77 @@
 
 <div class="section hero" id="inicio">
   <h1>Web design that impresses</h1>
-  <p>Fast, modern and local – made in Sinaloa. Build a professional online presence without complications.</p>
+  <p>Fast, modern and local – made in Sinaloa. Create a professional online presence, hassle-free.</p>
   <a href="https://wa.me/526731340913" target="_blank">Request your free consultation</a>
+</div>
+
+<div class="section" id="servicios">
+  <h2>Professional Services</h2>
+  <p>We offer complete solutions for your digital presence. Our goal is that you don’t have to worry about any technical aspect – we handle it for you.</p>
+
+  <details>
+    <summary>Web Design & Development</summary>
+    <ul>
+      <li>Responsive websites (mobile & desktop)</li>
+      <li>Modern and customized web design</li>
+      <li>Integration of WhatsApp, Google Maps and social networks</li>
+      <li>Interactive contact forms</li>
+      <li>Informative pages, portfolios and institutional sites</li>
+      <li>Basic online store (catalog + contact)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Domains & Hosting</summary>
+    <ul>
+      <li>Domain registration (.com, .mx, .net, etc.)</li>
+      <li>Professional and custom setup</li>
+      <li>Fast, secure, and reliable hosting</li>
+      <li>Corporate email accounts (e.g. contact@yourcompany.com)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>SEO & Optimization</summary>
+    <ul>
+      <li>Basic SEO to appear on Google</li>
+      <li>Loading speed improvement</li>
+      <li>Mobile optimization</li>
+      <li>Search engine-friendly text and structure</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Graphic Design & Branding</summary>
+    <ul>
+      <li>Logo creation from scratch</li>
+      <li>Adapting an existing logo</li>
+      <li>Corporate color and font selection</li>
+      <li>Banner, flyer and digital card design</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Support & Updates</summary>
+    <ul>
+      <li>Technical support via WhatsApp</li>
+      <li>Content updates</li>
+      <li>Ongoing corrections and maintenance</li>
+      <li>Help with small adjustments or changes</li>
+    </ul>
+  </details>
 </div>
 
 <div class="section" id="contacto">
   <h2>Contact</h2>
-  <p>Have questions or want to know how much it would cost to have your own professional website?</p>
-  <p>Message us on WhatsApp with your idea. We’ll advise you with no obligation and provide a clear, quick quote.</p>
-  <a class="hero a" href="https://wa.me/526731340913" target="_blank">📲 Send message</a>
+  <p>Do you have questions or want to know how much your own website would cost?</p>
+  <p>Send us a message on WhatsApp and tell us about your idea. We’ll give you fast, clear advice with no obligations.</p>
+  <a class="hero a" href="https://wa.me/526731340913" target="_blank">📲 Send Message</a>
 </div>
 
 <div class="section" id="nosotros">
-  <h2>About us</h2>
-  <p>ALHUA WEB was founded by Tobias (from Germany) and Griselda (from Sinaloa, Mexico), who combined their passion for technology and design to create an agency that understands both local needs and international standards. With European roots and a heart in Sinaloa, we offer modern solutions with a human touch.</p>
+  <h2>About Us</h2>
+  <p>ALHUA WEB was founded by Tobias (from Germany) and Griselda (from Sinaloa, Mexico), who joined forces through their passion for technology and design to create an agency that understands both local needs and international standards. With European roots and a Sinaloan heart, we offer modern solutions with a human touch.</p>
 </div>
 
 </body>
